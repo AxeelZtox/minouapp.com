@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textos y respaldos | Minou</title>
+<meta name="description" content="En qué parte del dispositivo se guarda lo escrito y cómo crear o restaurar un respaldo.">
+<meta name="theme-color" content="#1C1824">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<main class="pagina">
+<nav aria-label="Volver">
+  <a class="volver" href="../"><span aria-hidden="true">←</span> Índice</a>
+</nav>
+<header class="encabezado sello">
+    <span class="lamina"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.258 7.482a5 5 0 0 0 1-3c-.34-3.999-7.51-6.349-10-1.54a2.5 2.5 0 0 0-.5-.48a4.43 4.43 0 0 0-6.998 4.2A4.13 4.13 0 0 0 0 10.802a5.7 5.7 0 0 0 .6 2.35c.57 1.11 2.8 1.95 3.46 1.62a.31.31 0 0 0-.27-.55a3.47 3.47 0 0 1-2.57-1.38c-1.44-3 .6-5.6 3.37-5.25c.29.06.568.172.82.33a.49.49 0 0 0 .5-.83c-.25-.24-.19-.8-.18-1.18a3.35 3.35 0 0 1 5.349-2.49c.75.52.52 1.46 1.25 1.44c.46 0 .5-.3.92-1.33c1.82-3.809 7.639-1.92 7.999 1a4.37 4.37 0 0 1-.93 2.65s-.55.33-.49.47a.53.53 0 0 0-.21.42c0 .12.37.68.81.34c2.8-.58 3.57 3.61 1.79 5.12a6.4 6.4 0 0 1-2.82 1.3a.35.35 0 0 0 .14.68a7.1 7.1 0 0 0 3.17-1.4c2.22-1.8 1.48-6.29-1.45-6.63"/><path d="M7 15.141c-1.65 2.43-.8 6 .84 7a.302.302 0 1 0 .34-.5c-1.3-.91-1.89-4-.42-6a4.89 4.89 0 0 1 7.639-.4c2.41 2.86 1 7.2-3.27 7.7a5.7 5.7 0 0 1-2.32-.16a.344.344 0 0 0-.22.649a6.25 6.25 0 0 0 2.62.28a5.56 5.56 0 0 0 4.08-9.199a5.8 5.8 0 0 0-9.29.63"/><path d="M10.51 20.501c1.14.07 2.5-3.12 3-4.15a1 1 0 0 0 .27-.58a.36.36 0 0 0-.65-.18c-.24.29-2.72 3.89-2.66 4c-.2 0-1.2-1.17-1.35-1.27s-.58.18-.35.51c.39.59 1.07 1.64 1.74 1.67"/></g></svg></span>
+    <div class="texto">
+      <h1 class="t">Textos y respaldos</h1>
+      <p class="d">En qué parte del dispositivo se guarda lo escrito y cómo crear o restaurar un respaldo.</p>
+    </div>
+</header>
+<article class="contenido">
+<!-- Escrito para lo que está en las tiendas, la 1.1.1: la pantalla se llama
+     Respaldos (Ajustes, sección Datos) con "Respaldar ahora" y "Restaurar
+     backup". Con la 1.2.0 cambian los nombres ("Respaldar y exportar") y
+     entran iCloud y Google Drive: actualizar esta página el día que salga,
+     con las frases de docs/SYNC_DESIGN.md, "Lo que se puede afirmar hoy". -->
+<h2>Dónde se guarda lo que escribes</h2>
+<p>Minou guarda tus textos cifrados en tu dispositivo, sin crear una cuenta. Las imágenes que agregas, como portadas y fotos de personajes, se guardan en la carpeta de la app sin cifrar.</p>
+
+<h2>Si desinstalas Minou</h2>
+<p>Al desinstalar Minou, se eliminan los textos guardados en la app. Para recuperarlos después necesitas un respaldo guardado fuera de Minou.</p>
+
+<div class="tarjeta">
+  <h2>Cómo hacer un respaldo</h2>
+  <ol>
+    <li>Abre Ajustes y, en la sección Datos, entra a Respaldos.</li>
+    <li>Toca Respaldar ahora.</li>
+    <li>Guarda el archivo .zip fuera de Minou: en Archivos, en tu nube o en otro dispositivo.</li>
+  </ol>
+  <p>El respaldo contiene toda tu biblioteca con sus imágenes. El archivo .zip no va cifrado: cualquier persona que lo tenga puede leer lo que escribiste.</p>
+</div>
+
+<div class="tarjeta">
+  <h2>Cómo restaurarlo</h2>
+  <ol>
+    <li>Instala Minou en el dispositivo.</li>
+    <li>Abre Ajustes y, en la sección Datos, entra a Respaldos.</li>
+    <li>Toca Restaurar backup y elige el archivo .zip.</li>
+  </ol>
+  <p>Restaurar reemplaza la biblioteca que haya en ese dispositivo por la del respaldo.</p>
+</div>
+
+<h2>Entre Android, iPhone y iPad</h2>
+<p>Un respaldo hecho en Android se restaura en iPhone o iPad, y uno hecho en iPhone o iPad se restaura en Android.</p>
+
+</article>
+<nav class="paginador" aria-label="Páginas">
+  <a href="../descargar/"><small>← Anterior</small><span>Descargar</span></a>
+<a class="siguiente" href="../ayuda/"><small>Siguiente →</small><span>Preguntas frecuentes</span></a>
+</nav>
+<footer class="pie">
+  <p>Hecha por una persona que también escribe fanfic.</p>
+  <p>Íconos de <a href="https://www.streamlinehq.com/">Streamline</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>), Material Symbols de Google y Stash Icons.</p>
+</footer>
+</main>
+</body>
+</html>
