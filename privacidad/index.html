@@ -23,27 +23,44 @@
     </div>
 </header>
 <article class="contenido">
-<p class="dato">Última actualización: 3 de noviembre de 2026 (versión 1.1.1)</p>
+<p class="dato">Última actualización: 3 de noviembre de 2026 (versión 1.2.0)</p>
 <p>Minou es una app para escribir fanfics e historias. Funciona sin conexión y sin cuenta, y guarda lo que escribes en tu dispositivo.</p>
 <h2>En resumen</h2>
 <ul>
-  <li><strong>Funciona sin conexión.</strong> Minou no tiene servidores propios ni cuentas, y no guarda tus textos en una nube.</li>
-  <li><strong>Minou no recopila datos.</strong> Tus textos, tus fichas, tus ajustes y todo lo que creas en la app se guardan en tu dispositivo.</li>
+  <li><strong>Funciona sin conexión.</strong> Minou no tiene servidores propios ni cuentas. Si prendes la sincronización con iCloud o el respaldo en Google Drive, tu biblioteca va a tu propia cuenta de Apple o de Google, y Minou no la recibe. Al pegar el enlace de una canción, Minou le pregunta al servicio de música su título y su portada.</li>
+  <li><strong>Minou no recopila datos.</strong> Lo que escribes, las fichas, los ajustes y todo lo que creas en la app se guardan en tu dispositivo, y también en iCloud o en Drive si usas esas opciones.</li>
   <li><strong>Minou no vende ni comparte información.</strong> La app no tiene analítica, anuncios ni rastreadores.</li>
   <li><strong>Sin inteligencia artificial.</strong> Tus textos no se usan para entrenar modelos de IA y no se envían a terceros.</li>
 </ul>
 <h2>Qué se guarda y dónde</h2>
-<p>Lo que escribes y configuras en Minou (proyectos, historias, capítulos, personajes, lugares, glosario, notas y ajustes) se guarda en tu dispositivo, en una base de datos cifrada (SQLCipher). Las imágenes que agregas (portadas, avatares y fotos de personajes) se copian a la carpeta privada de la app y no van cifradas. Estos datos salen de tu dispositivo cuando tú exportas o respaldas, y en la copia de seguridad del sistema que se describe abajo.</p>
+<p>Lo que escribes y configuras en Minou (proyectos, historias, capítulos, personajes, lugares, glosario, notas y ajustes) se guarda en tu dispositivo, en una base de datos cifrada (SQLCipher). Las imágenes que agregas (portadas, avatares y fotos de personajes) se copian a la carpeta privada de la app y no van cifradas. Estos datos salen de tu dispositivo cuando tú exportas o respaldas, cuando usas iCloud o Google Drive como se describe abajo, y en la copia de seguridad del sistema.</p>
 <p><strong>Copias de seguridad del sistema.</strong> En Android, Minou desactiva la copia automática de Google, así que el sistema no respalda los datos de la app. En iPhone y iPad, la copia de seguridad que tengas activada en iCloud o en tu computadora puede incluir los datos de Minou, como los de cualquier otra app. Esa copia la gestiona Apple.</p>
-<h2>Exportaciones y respaldos</h2>
+<h2>Sincronizar con iCloud (iPhone y iPad)</h2>
+<p>En iPhone y iPad, Minou puede sincronizar tu biblioteca entre los aparatos de tu cuenta de Apple. Viene apagado y se prende en Respaldar y exportar. Antes de mover nada, Minou te enseña qué hay en el aparato y qué hay en iCloud, y te pregunta si quieres combinarlos.</p>
+<p>Con la sincronización prendida, lo que escribes y armas se guarda en la base privada de iCloud de tu cuenta (CloudKit): textos, fichas, versiones guardadas de los capítulos, el registro diario de palabras, el diccionario personal y las fotos. Los ajustes del aparato y la Papelera no viajan. Lo que escribes va en campos cifrados de CloudKit, con llaves del llavero de iCloud de tu cuenta. Minou no tiene servidor ni llave propia, así que lo que hay en tu iCloud no le llega a Minou. Apple guarda esos datos según su propia política de privacidad.</p>
+<p>Para que tus otros aparatos se enteren de un cambio, Apple puede mandarle a la app avisos silenciosos, que no muestran nada en pantalla.</p>
+<h2>Respaldo en Google Drive (Android)</h2>
+<p>En Android, Minou puede guardar respaldos en tu Google Drive. Para eso conectas una cuenta de Google, y Minou pide permiso solo para los archivos que ella crea: una carpeta "Minou" en tu Drive. El resto de tu Drive no lo ve.</p>
+<p>Cada respaldo es el mismo .zip de "Respaldo en un archivo": tu biblioteca con sus fotos y sus ajustes. Cifrar viene apagado. Si lo prendes y eliges una contraseña, el respaldo se cifra en tu teléfono antes de subir, y sin esa contraseña no se puede abrir, tampoco desde Minou. Sin cifrar, cualquier persona con acceso a tu Drive puede leerlo.</p>
+<p>Junto a cada respaldo, Minou anota en Drive lo que la lista de Restaurar enseña sin bajar el archivo: cuántos proyectos, historias, capítulos, palabras y fotos tiene, la versión de la app, un identificador al azar de la instalación y el nombre del teléfono. Esas notas no van cifradas. Ningún título ni texto tuyo va en ellas.</p>
+<p>Con la cuenta conectada, el respaldo automático viene prendido: una vez al día, solo con Wi-Fi y solo si algo cambió. Se apaga en Respaldar y exportar. En tu Drive se quedan los últimos cinco respaldos de cada teléfono, y Minou borra los más viejos que ella subió.</p>
+<p>En tu teléfono, Minou guarda el correo de la cuenta conectada y, si cifras, la llave que sale de tu contraseña. Google guarda los respaldos según su propia política de privacidad. Si desconectas la cuenta, los respaldos se quedan en tu Drive.</p>
+<h2>Canciones</h2>
+<p>A un personaje, una pareja o una historia les puedes agregar canciones. Si pegas un enlace de Spotify, YouTube, YouTube Music o Apple Music, Minou le pregunta a ese servicio el título, el artista y la portada. Lo único que se manda es el enlace; ningún texto tuyo va en la consulta. La consulta va a la dirección pública de cada servicio (el oEmbed de Spotify y el de YouTube, y la búsqueda de iTunes), sin cuenta ni llave, y la portada se baja de sus servidores de imágenes. Como en cualquier conexión, el servicio ve la dirección de red de tu teléfono.</p>
+<p>La consulta solo pasa cuando pegas o aceptas un enlace, cuando tocas "Traer título y portada" o cuando abres una canción que se quedó sin portada. Al guardar, la portada queda en tu dispositivo con tus demás imágenes. Un enlace de otro sitio se guarda tal cual, sin consulta, y el título se puede escribir a mano.</p>
+<h2>Exportaciones y respaldos en archivo</h2>
 <p>Minou crea exportaciones (HTML para AO3, texto, Markdown, Word o PDF) y respaldos (.zip) cuando tú lo pides. Esos archivos no van cifrados: cualquier persona que tenga el archivo puede leer su contenido. Se guardan donde tú elijas, y Minou no los sube a ningún servicio. Si los mandas a un almacenamiento en línea o a otra persona, ese paso lo decides tú.</p>
 <h2>Permisos</h2>
-<p>Minou no te pide permisos del sistema. No usa la cámara, el micrófono, los contactos ni la ubicación.</p>
-<p>Para exportar, respaldar o agregar una imagen, Minou abre los selectores del sistema (archivos y fotos) para que elijas el archivo. Así la app no necesita permiso de almacenamiento ni accede a tus demás archivos.</p>
+<p>Minou no usa la cámara, el micrófono, los contactos ni la ubicación.</p>
+<p>Para exportar, respaldar o agregar una imagen, Minou abre los selectores del sistema (archivos y fotos) para que elijas el archivo. Así la app no necesita permiso de almacenamiento ni accede a tus demás archivos. La excepción es Android 8 y 9: ahí, guardar un archivo en Descargas pide el permiso de almacenamiento la primera vez.</p>
+<p>En Android, el respaldo automático revisa si la red es Wi-Fi o de datos. Es un permiso que Android concede al instalar, sin preguntar, y solo dice el tipo de red.</p>
 <h2>Conexión a internet</h2>
-<p>Minou no envía tus textos ni tu actividad a ningún servidor. La app se conecta a internet en dos casos:</p>
+<p>Minou no tiene servidores, así que tus textos y tu actividad no llegan a Minou. La app se conecta a internet en estos casos:</p>
 <ul>
   <li>Para procesar la compra de Pro en Google Play o en el App Store. La tienda gestiona la compra con su propia política de privacidad. Minou guarda en tu dispositivo solo el registro de que ya compraste.</li>
+  <li>Si prendes la sincronización con iCloud, para hablar con iCloud en nombre de tu cuenta de Apple.</li>
+  <li>Si conectas Google Drive, para iniciar sesión con Google y para subir, listar, bajar y borrar los respaldos de la carpeta "Minou".</li>
+  <li>Cuando pegas el enlace de una canción, para pedirle al servicio de música su título y su portada, como se describe arriba.</li>
   <li>Para abrir en tu navegador los enlaces que tocas, como Discord, Instagram o TikTok. Esos sitios se rigen por sus propias políticas.</li>
 </ul>
 <h2>Menores de edad</h2>
